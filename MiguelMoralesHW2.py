@@ -21,7 +21,11 @@ def readData():
 
 """Funtion to draw the data"""
 def draw(data):
-    plt.plot(data) # here we create our chart for the data
+    items = [i for i in enumerate(data)] # we enumerate every item in the data
+    y,x = zip(*items) #we zip it to show in the correct order
+    plt.plot(x,y) # here we create our chart for the data
+    plt.xlabel("data")
+    plt.ylabel("Item")
     plt.show() # and show it
 
 
